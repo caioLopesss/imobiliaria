@@ -1,5 +1,25 @@
 import { cn } from "@/lib/cn"
 
+function SigmaMark({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 48 42"
+      fill="none"
+      aria-hidden
+      className={className}
+    >
+      <path
+        d="M41 7H7L24 21 7 35H41"
+        stroke="currentColor"
+        strokeWidth="3.4"
+        strokeLinejoin="miter"
+        strokeLinecap="butt"
+        strokeMiterlimit="8"
+      />
+    </svg>
+  )
+}
+
 export function Logo({
   inverted = false,
   className,
@@ -8,31 +28,19 @@ export function Logo({
   className?: string
 }) {
   return (
-    <span className={cn("inline-flex h-[46px] items-center", className)}>
-      {/* Coloque o arquivo em /public/sigma-logo.png para substituir o wordmark. */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/sigma-logo.png"
-        alt="Sigma Imóveis"
-        height={46}
-        className={cn(
-          "h-[46px] w-auto max-w-[180px] object-contain object-left",
-          inverted && "brightness-0 invert"
-        )}
-        onError={(event) => {
-          event.currentTarget.style.display = "none"
-          const fallback = event.currentTarget.nextElementSibling
-          if (fallback instanceof HTMLElement) fallback.hidden = false
-        }}
-      />
-      <span
-        hidden
-        className={cn(
-          "font-display text-[28px] tracking-[0.12em]",
-          inverted ? "text-paper-2" : "text-ink"
-        )}
-      >
+    <span
+      className={cn(
+        "inline-flex flex-col items-center leading-none",
+        inverted ? "text-paper-2" : "text-brass",
+        className
+      )}
+    >
+      <SigmaMark className="h-[26px] w-auto" />
+      <span className="mt-1.5 font-sans text-[12px] font-semibold tracking-[0.22em]">
         SIGMA
+      </span>
+      <span className="mt-1 font-sans text-[7.5px] font-normal tracking-[0.46em]">
+        IMÓVEIS
       </span>
     </span>
   )

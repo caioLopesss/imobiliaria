@@ -3,23 +3,23 @@ import type { Article } from "@/lib/types"
 export const ARTICLES: Article[] = [
   {
     categoria: "Mercado",
-    titulo: "O metro quadrado em Pinheiros, lido em planta",
+    titulo: "O metro quadrado no Centro Histórico, lido em planta",
     resumo:
-      "Como a demanda por plantas bem resolvidas está reposicionando preços em um dos eixos mais procurados da cidade.",
+      "Como casarões, pé-direito e restrições de tombamento reposicionam preços no coração de São João del Rei.",
     href: "#panorama",
   },
   {
     categoria: "Bairros",
-    titulo: "Jardins: o endereço que continua a se redesenhar",
+    titulo: "Matosinhos: o endereço que continua a se redesenhar",
     resumo:
-      "Entre ruas arborizadas e novas fachadas, o bairro segue como referência de escala humana e permanência.",
+      "Entre o comércio local e novas fachadas, o bairro segue como referência de escala humana e permanência.",
     href: "#panorama",
   },
   {
     categoria: "Guia",
     titulo: "Como ler uma planta baixa antes da visita",
     resumo:
-      "Cotas, circulação e insolação: o que observar no desenho técnico para não se perder no apartamento real.",
+      "Cotas, circulação e insolação: o que observar no desenho técnico para não se perder no imóvel real.",
     href: "#panorama",
   },
 ]
